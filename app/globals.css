@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --foreground: #171717;
+  --muted: #78716c;
+  --border: #e7e5e4;
+  --accent: #4f46e5;
+  --card: #ffffff;
+  --hi-bg: #fef3c7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0c0a09;
+    --foreground: #f5f5f4;
+    --muted: #a8a29e;
+    --border: #292524;
+    --accent: #818cf8;
+    --card: #1c1917;
+    --hi-bg: #422006;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.paper-content {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.paper-content h1,
+.paper-content h2,
+.paper-content h3,
+.paper-content h4 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.6em 0 0.5em;
+}
+
+.paper-content h1 { font-size: 1.75rem; }
+.paper-content h2 { font-size: 1.35rem; }
+.paper-content h3 { font-size: 1.15rem; }
+
+.paper-content p { margin: 0.9em 0; }
+.paper-content ul,
+.paper-content ol { margin: 0.9em 0; padding-left: 1.5em; }
+.paper-content li { margin: 0.3em 0; }
+.paper-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.paper-content figure { margin: 1.5em 0; text-align: center; }
+.paper-content figure img { max-width: 100%; height: auto; display: inline-block; }
+.paper-content figcaption { color: var(--muted); font-size: 0.9em; margin-top: 0.5em; }
+.paper-content table { border-collapse: collapse; margin: 1em 0; font-size: 0.95em; }
+.paper-content th,
+.paper-content td { border: 1px solid var(--border); padding: 0.4em 0.7em; }
+.paper-content sup,
+.paper-content sub { font-size: 0.75em; }
+.paper-content cite { font-style: normal; color: var(--muted); }
+.paper-content code { font-family: var(--font-mono), ui-monospace, monospace; font-size: 0.9em; background: color-mix(in oklab, var(--muted) 15%, transparent); padding: 0.1em 0.35em; border-radius: 0.25em; }
+.paper-content pre { overflow-x: auto; padding: 0.9em; background: color-mix(in oklab, var(--muted) 12%, transparent); border-radius: 0.5em; }
+.paper-content ::selection { background: var(--hi-bg); }

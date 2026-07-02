@@ -20,6 +20,10 @@
 # local data
 /data/
 
+# claude code / omc session state
+/.omc/
+/.claude/
+
 # production
 /build
 
